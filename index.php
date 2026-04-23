@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost", "Mellistan11", "server", "databas");
+$conn = new mysqli("localhost", "Mellistan11", "new_password", "databas");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
