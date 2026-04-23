@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $sql = "INSERT INTO formdata (title, description) VALUES (test
+    $sql = "INSERT INTO formdata (title, description) VALUES (test, beskrivning)";
 
 }
 
