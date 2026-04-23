@@ -1,8 +1,12 @@
 <?php
 
+$conn = new mysqli("localhost", "Mellistan11", "server", "databas");
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $sql = "INSERT INTO formdata (title, description) VALUES (test, beskrivning)";
+    $användare = $_POST["användare"];
+    $lösernord = $_POST["Lösernord"];
+    $sql = "INSERT INTO formdata (title, description) VALUES ($användare, $lösernord)";
 
 }
 
