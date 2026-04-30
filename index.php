@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $användare = $_POST["användare"];
     $lösernord = $_POST["lösenord"];
-    $sql = "INSERT INTO users (title, description) VALUES ('$användare', '$lösernord')";
+    $sql = "INSERT INTO users (användare, lösernord) VALUES ('$användare', '$lösernord')";
     $conn->query($sql);
 }
 
