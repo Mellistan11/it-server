@@ -5,7 +5,7 @@ $conn = new mysqli("localhost", "Mellistan11", "New_password1", "databas");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $användare = $_POST["användare"];
-    $lösernord = $_POST["Lösernord"];
+    $lösernord = $_POST["lösenord"];
     $sql = "INSERT INTO users (title, description) VALUES ('$användare', '$lösernord')";
     $conn->query($sql);
 }
@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 <form method="POST">
-    Titel: <input type="text" name="titel" required><br><br>
-    Beskrivning:<br>
-    <textarea name="beskrivning" rows="5" cols="40"></textarea><br><br>
+    Användare: <input type="text" name="användare" required><br><br>
+    Lösernord:<br>
+    <input name="lösenord" type="password"></input><br><br>
     <input type="submit" value="Skicka">
 </form>
 </body>
