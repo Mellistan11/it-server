@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $conn = new mysqli("localhost", "Mellistan11", "New_password1", "databas");
 
@@ -8,7 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lösernord = $_POST["lösenord"];
     $sql = "INSERT INTO users (användare, lösernord) VALUES ('$användare', '$lösernord')";
     $conn->query($sql);
+
+    $_SESSION["användare"] = $användare;
+    echo "<p>Inloggad som: " .   $_SESSION["användare"] . "</p>";
+
 }
+
 
 ?>
 
