@@ -8,8 +8,6 @@ body {
     background: #efefef;
 }
 
-
-
 .container {
     background: rgb(255, 255, 255);
     padding: 30px;
@@ -19,8 +17,6 @@ body {
     width: 300px;
 }
 
-
-
 input {
     width: 100%;
     padding: 10px 0;
@@ -28,8 +24,6 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-
 
 button {
     width: 100%;
@@ -46,8 +40,6 @@ button:hover {
     background: #e0e0e0;
     transition: 0.3s;
 }
-
-
 
 a {
     display: block;
