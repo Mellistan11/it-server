@@ -25,16 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Facelook</h1>
+    <h1 class="logo">Facelook</h1>
     <div class="container">
-        <h2>Skapa konto</h2>
+        <h2 class="text">Skapa konto</h2>
         <form method="POST">
-            <input type="text" name="användare" placeholder="Användarnamn" required>
-            <input type="password" name="lösenord" placeholder="Lösenord" required>
-            <button type="submit">Skapa konto</button>
+            <input class="input" type="text" name="användare" placeholder="Användarnamn" required>
+            <input class="input" type="password" name="lösenord" placeholder="Lösenord" required>
+            <button class="button" type="submit">Skapa konto</button>
         </form>
-        <a href="login.php">Har du konto? Logga in</a>
-        <h3>© 2026 Facelook</h3>
+        <a class="link" href="login.php">Har du konto? Logga in</a>
+        <h3 class="copyright" >© 2026 Facelook</h3>
     </div>
 </body>
 </html>
