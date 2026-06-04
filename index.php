@@ -6,16 +6,17 @@ $conn = new mysqli("localhost", "Mellistan11", "New_password1", "databas");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $användare = $_POST["användare"];
-    $lösernord = $_POST["lösenord"];
-    $sql = "INSERT INTO users (användare, lösernord) VALUES ('$användare', '$lösernord')";
-    $conn->query($sql);
+    $lösenord = password_hash($_POST["lösenord"], PASSWORD_DEFAULT);
+
+    $stmt = $conn->prepare("INSERT INTO users (användare, lösenord) VALUES (?, ?)");
+    $stmt->bind_param("ss", $användare, $lösenord);
+    $stmt->execute();
 
     $_SESSION["användare"] = $användare;
-    echo "<p>Inloggad som: " .   $_SESSION["användare"] . "</p>";
 
+    header("Location: dashboard.php");
+    exit();
 }
-
-
 ?>
 
 <!DOCTYPE html>
