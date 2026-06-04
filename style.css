@@ -2,10 +2,27 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;   /* important */
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
     background: #efefef;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    color: #1877F2;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 5px;
+    text-align: center; 
 }
 
 .container {
@@ -18,38 +35,51 @@ body {
 }
 
 input {
-    width: 100%;
-    padding: 10px 0;
+    width: calc(90% - 2px);
+    height: 20px;
+    padding: 10px 5%;
     margin: 8px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: font-size 0.2s ease-in-out;
+}
+
+input:hover {
+    font-size: 15px;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background: #cccccc;
+    background: #4589e3;
     border: none;
-    color: rgb(0, 0, 0);
+    color: rgb(250, 250, 250);
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #e0e0e0;
+    background: #b9d2f4;
+    color: rgb(0, 0, 0);
     transition: 0.3s;
 }
 
 a {
     display: block;
     margin-top: 10px;
-    color: #007bff;
+    color: #ff0000;
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
-    color: hsl(212, 82%, 43%);
+    transform: scale(110%);
     transition: 0.3s;
+}
+
+h3 {
+    font-family: Roboto, "Arial", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
 }
