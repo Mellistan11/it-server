@@ -32,13 +32,12 @@ $result = $stmt->get_result();
 </head>
 <body>
     <div class="container">
-        <h2>Logga in</h2>
+        <h2>Välkommen</h2>
         <form method="POST">
-            <input type="text" name="användare" placeholder="Användarnamn" required>
-            <input type="password" name="lösenord" placeholder="Lösenord" required>
-            <button type="submit">Logga in</button>
+            <textarea name="note" placeholder="Skriv anteckning"></textarea>
+            <button type="submit">Spara</button>
         </form>
-        <a href="register.php">Skapa konto</a>
+        <a href="logout.php">Logga ut</a>
     </div>
 </body>
 </html>
