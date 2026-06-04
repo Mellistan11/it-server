@@ -35,17 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-
-    <h2>Logga in</h2>
-
-    <form method="POST">
-        <input type="text" name="användare" placeholder="Användarnamn" required>
-        <input type="password" name="lösenord" placeholder="Lösenord" required>
-        <button type="submit">Logga in</button>
-    </form>
-
-    <a href="register.php">Skapa konto</a>
-
+        <h2>Logga in</h2>
+        <form method="POST">
+            <input type="text" name="användare" placeholder="Användarnamn" required>
+            <input type="password" name="lösenord" placeholder="Lösenord" required>
+            <button type="submit">Logga in</button>
+        </form>
+        <a href="register.php">Skapa konto</a>
     </div>
 </body>
 </html>
