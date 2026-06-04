@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button class="button" type="submit">Logga in</button>
         </form>
         <a class="link" href="register.php">Skapa konto</a>
+        <h3 class="copyright" >© 2026 Facelook</h3>
     </div>
 </body>
 </html>

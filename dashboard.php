@@ -39,6 +39,7 @@ $result = $stmt->get_result();
             <button class="button" type="submit">Spara</button>
         </form>
         <a class="link" href="logout.php">Logga ut</a>
+        <h3 class="copyright" >© 2026 Facelook</h3>
     </div>
 </body>
 </html>

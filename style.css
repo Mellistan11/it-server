@@ -2,7 +2,7 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column;   /* important */
+    flex-direction: column;  
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
@@ -44,7 +44,7 @@ body {
     transition: font-size 0.2s ease-in-out;
 }
 
-.input:hover {
+.input:hover, .note:hover {
     font-size: 15px;
 }
 
