@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $conn = new mysqli("localhost", "Mellistan11", "New_password1", "databas");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -13,26 +12,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 
     $_SESSION["användare"] = $användare;
-
     header("Location: dashboard.php");
     exit();
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
 </head>
 <body>
+
+<h2>Skapa konto</h2>
+
 <form method="POST">
-    Användare: <input type="text" name="användare" required><br><br>
-    Lösernord:<br>
-    <input name="lösenord" type="password"></input><br><br>
-    <input type="submit" value="Skicka">
+    <input type="text" name="användare" placeholder="Användarnamn" required><br><br>
+    <input type="password" name="lösenord" placeholder="Lösenord" required><br><br>
+    <button type="submit">Skapa konto</button>
 </form>
+
+<a href="login.php">Har du konto? Logga in</a>
+
 </body>
 </html>
-

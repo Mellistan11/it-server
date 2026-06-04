@@ -18,10 +18,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: dashboard.php");
             exit();
         } else {
-            echo "Fel lösenord";
+            $error = "Fel lösenord";
         }
     } else {
-        echo "Användare finns inte";
+        $error = "Användare finns inte";
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<h2>Logga in</h2>
+
+<?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+
+<form method="POST">
+    <input type="text" name="användare" placeholder="Användarnamn" required><br><br>
+    <input type="password" name="lösenord" placeholder="Lösenord" required><br><br>
+    <button type="submit">Logga in</button>
+</form>
+
+<a href="register.php">Skapa konto</a>
+
+</body>
+</html>
