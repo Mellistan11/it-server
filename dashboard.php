@@ -31,13 +31,14 @@ $result = $stmt->get_result();
     <title>Dashboard</title>
 </head>
 <body>
+    <h1 class="logo">Facelook</h1>
     <div class="container">
-        <h2>Välkommen</h2>
+        <h2 class="text" >Välkommen</h2>
         <form method="POST">
-            <textarea name="note" placeholder="Skriv anteckning"></textarea>
-            <button type="submit">Spara</button>
+            <textarea class="note" name="note" placeholder="Skriv anteckning"></textarea>
+            <button class="button" type="submit">Spara</button>
         </form>
-        <a href="logout.php">Logga ut</a>
+        <a class="link" href="logout.php">Logga ut</a>
     </div>
 </body>
 </html>

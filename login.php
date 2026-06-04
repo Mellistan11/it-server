@@ -34,14 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 class="logo">Facelook</h1>
     <div class="container">
-        <h2>Logga in</h2>
+        <h2 class="text">Logga in</h2>
         <form method="POST">
-            <input type="text" name="användare" placeholder="Användarnamn" required>
-            <input type="password" name="lösenord" placeholder="Lösenord" required>
-            <button type="submit">Logga in</button>
+            <input class="input" type="text" name="användare" placeholder="Användarnamn" required>
+            <input class="input" type="password" name="lösenord" placeholder="Lösenord" required>
+            <button class="button" type="submit">Logga in</button>
         </form>
-        <a href="register.php">Skapa konto</a>
+        <a class="link" href="register.php">Skapa konto</a>
     </div>
 </body>
 </html>
