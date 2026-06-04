@@ -34,7 +34,7 @@ $result = $stmt->get_result();
 <body>
     <h1 class="logo">Facelook</h1>
     <div class="container">
-        <h2 class="text" >Välkommen</h2>
+        <h2 class="text" >Välkommen, <span class="username"><?php echo $current_user; ?></span></h2>
         <form method="POST">
             <textarea class="note" name="note" placeholder="Skriv anteckning"></textarea>
             <button class="button" type="submit">Spara</button>
