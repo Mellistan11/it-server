@@ -22,18 +22,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="container">
 
 <h2>Skapa konto</h2>
 
 <form method="POST">
-    <input type="text" name="användare" placeholder="Användarnamn" required><br><br>
-    <input type="password" name="lösenord" placeholder="Lösenord" required><br><br>
+    <input type="text" name="användare" placeholder="Användarnamn" required>
+    <input type="password" name="lösenord" placeholder="Lösenord" required>
     <button type="submit">Skapa konto</button>
 </form>
 
 <a href="login.php">Har du konto? Logga in</a>
+
+</div>
 
 </body>
 </html>

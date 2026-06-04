@@ -29,24 +29,21 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
 
-<h2>Välkommen <?php echo htmlspecialchars($user); ?></h2>
+    <h2>Logga in</h2>
 
-<form method="POST">
-    <textarea name="note" placeholder="Skriv en anteckning..." required></textarea><br><br>
-    <button type="submit">Spara</button>
-</form>
+    <form method="POST">
+        <input type="text" name="användare" placeholder="Användarnamn" required>
+        <input type="password" name="lösenord" placeholder="Lösenord" required>
+        <button type="submit">Logga in</button>
+    </form>
 
-<h3>Dina anteckningar:</h3>
+    <a href="register.php">Skapa konto</a>
 
-<?php while ($row = $result->fetch_assoc()): ?>
-    <p><?php echo htmlspecialchars($row["note"]); ?></p>
-<?php endwhile; ?>
-
-<br>
-<a href="logout.php">Logga ut</a>
-
+    </div>
 </body>
 </html>

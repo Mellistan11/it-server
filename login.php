@@ -31,20 +31,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
 
-<h2>Logga in</h2>
+    <h2>Logga in</h2>
 
-<?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+    <form method="POST">
+        <input type="text" name="användare" placeholder="Användarnamn" required>
+        <input type="password" name="lösenord" placeholder="Lösenord" required>
+        <button type="submit">Logga in</button>
+    </form>
 
-<form method="POST">
-    <input type="text" name="användare" placeholder="Användarnamn" required><br><br>
-    <input type="password" name="lösenord" placeholder="Lösenord" required><br><br>
-    <button type="submit">Logga in</button>
-</form>
+    <a href="register.php">Skapa konto</a>
 
-<a href="register.php">Skapa konto</a>
-
+    </div>
 </body>
 </html>
